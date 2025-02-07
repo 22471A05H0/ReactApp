@@ -1,0 +1,122 @@
+/* General styles for the navbar */
+.navbar {
+  position: fixed; /* Sticks navbar to the top */
+  top: 0;
+  left: 0;
+  width: 100%; /* Full width */
+  height: 80px; /* Standard height */
+  background-color: #9ce34b; /* Background color */
+  display: flex; /* Flexbox for alignment */
+  align-items: center; /* Vertically center items */
+  justify-content: space-between; /* Space between logo and links */
+  padding: 0 20px; /* Horizontal padding */
+  z-index: 1000; /* Ensures it’s above other content */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow */
+}
+
+/* Navbar logo */
+.navbar .logo {
+  margin-left: 15px; /* Align logo properly */
+}
+
+/* Navbar links container */
+.navbar .nav-links {
+  display: flex; /* Arrange links horizontally */
+  list-style: none; /* Remove default list styling */
+  margin: 0;
+  padding: 0;
+  align-items: center; /* Vertically center links */
+}
+
+/* Individual navbar links */
+.navbar .nav-links li {
+  margin: 0 15px; /* Space between links */
+}
+
+.navbar .nav-links a {
+  color: white; /* Link text color */
+  text-decoration: none; /* Remove underline */
+  font-size: 16px; /* Standard font size */
+  transition: color 0.3s ease; /* Smooth hover transition */
+}
+
+/* Hover effect for links */
+.navbar .nav-links a:hover {
+  color: #f0a500; /* Highlight color on hover */
+  text-decoration: underline;
+  font-size: 20px;
+}
+
+/* Hamburger menu (hidden by default) */
+.hamburger {
+  display: none; /* Hidden on larger screens */
+  flex-direction: column; /* Arrange lines vertically */
+  justify-content: space-around;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  z-index: 1010;
+}
+
+.hamburger div {
+  width: 100%;
+  height: 3px;
+  background-color: white;
+  border-radius: 2px;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column; /* Stack logo and menu vertically */
+    align-items: flex-start; /* Align items to the start */
+    height: auto; /* Adjust height */
+    padding: 10px 20px; /* Add padding for smaller screens */
+  }
+
+  .navbar .nav-links {
+    flex-direction: column; /* Stack links vertically */
+    align-items: flex-start; /* Align links to the start */
+    width: 100%; /* Full width for links */
+    background-color: #9ce34b; /* Match navbar background */
+    position: absolute; /* Make it float over content */
+    top: 80px; /* Below navbar */
+    left: 0;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    display: none; /* Initially hidden */
+  }
+
+  .navbar .nav-links.active {
+    display: flex; /* Show links when menu is active */
+  }
+
+  .navbar .nav-links li {
+    margin: 10px 0; /* Vertical spacing for links */
+  }
+
+  .hamburger {
+    display: flex; /* Show hamburger menu on small screens */
+  }
+}
+
+/* Larger screen adjustments for laptops/PCs */
+@media (min-width: 1024px) {
+  .navbar .nav-links a {
+    font-size: 18px; /* Slightly larger text for desktops */
+  }
+
+  .navbar .nav-links li {
+    margin: 0 20px; /* More spacing between links */
+  }
+}
+
+/* Content styling to avoid overlap */
+.content {
+  margin-top: 80px; /* Push content below the navbar */
+}

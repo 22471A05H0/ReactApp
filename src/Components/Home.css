@@ -1,0 +1,83 @@
+/* Full page container */
+.home-container {
+  width: 100%;
+  height: 100vh;
+  background-image: url('C:/React Project/dmsapp/public/images/building-3246378_640.jpg');  /* Ensure the correct path */
+  background-size: cover; /* Ensures the image covers the entire screen */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  background-attachment: fixed; /* Keeps the background fixed on scroll */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  animation: fadeInBackground 2s ease-in-out;
+}
+
+
+/* Dark overlay for readability */
+.content {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 80%;
+  animation: slideUp 1.5s ease-out;
+}
+
+/* Caption styling */
+.caption {
+  display: block;
+  margin-top: 10px;
+  font-size: 1.2rem;
+  font-style: italic;
+  color: #ffcc00; /* Highlight color */
+}
+
+/* Fade-in animation */
+@keyframes fadeInBackground {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeInText 1.5s ease-in forwards;
+}
+
+.delay {
+  animation-delay: 0.5s;
+}
+
+.delay-long {
+  animation-delay: 1s;
+}
+
+/* Smooth text fade-in effect */
+@keyframes fadeInText {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Slide-up animation */
+@keyframes slideUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

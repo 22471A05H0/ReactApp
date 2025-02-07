@@ -1,0 +1,411 @@
+/* Reset and Basic Styles */
+body, html, #root {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+}
+
+.about-container {
+  margin-top: 900px; /* Adjust this value based on your navbar's height */
+  padding: 20px;
+  animation: fadeIn 1.5s ease-in;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromBottom {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* About Section */
+.about-title {
+  font-size: 2.5em;
+  color: #48d1f7;
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 1300px;
+  animation: slideInFromLeft 1s ease-out;
+}
+
+.about-description {
+  font-size: 1.2em;
+  color: #555;
+  text-align: justify;
+  line-height: 1.6;
+  margin-top: 60px; /* Ensure it appears clearly below the title and navbar */
+}
+
+/* Features Section */
+.features-section {
+  margin-top: 40px;
+  animation: slideInFromRight 1.2s ease-out;
+}
+
+.features-title {
+  font-size: 2em;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.features-list {
+  list-style: none;
+  padding: 0;
+}
+
+.feature-item {
+  font-size: 1.1em;
+  color: #444;
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 25px;
+}
+
+.feature-item::before {
+  content: '\2022';
+  color: #007BFF;
+  position: absolute;
+  left: 0;
+}
+
+/* Gallery Section */
+.images-section {
+  margin-top: 40px;
+  animation: fadeIn 1.2s ease-in;
+}
+
+.images-title {
+  font-size: 2em;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.grid-image {
+  width: 100%;
+  height: 200px; /* Fixed height for uniform size */
+  border-radius: 10px;
+  object-fit: cover; /* Ensures the image fills the space without distortion */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.grid-image:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Mission Section */
+.mission-section {
+  margin-top: 40px;
+  animation: slideInFromBottom 1.2s ease-out;
+}
+
+.mission-title {
+  font-size: 2em;
+  color: #333;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.mission-description {
+  font-size: 1.2em;
+  color: #555;
+  text-align: center;
+  line-height: 1.6;
+}
+
+/* Statistics Section */
+.statistics-section {
+  background-color: #f7f7f7;
+  padding: 30px 20px;
+  border-radius: 8px;
+  margin-top: 40px;
+  animation: fadeIn 1.5s ease-in;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  text-align: center;
+}
+
+.stat-item {
+  background-color: white;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 8px;
+  animation: slideInFromLeft 1s ease-in-out;
+}
+
+.stat-number {
+  font-size: 2em;
+  color: #0044cc;
+}
+
+/* Call-to-Action Section */
+.cta-section {
+  background-color: #0044cc;
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+  border-radius: 8px;
+  margin: 40px 0;
+  animation: slideInFromBottom 1.5s ease-in-out;
+}
+
+.cta-title {
+  font-size: 2em;
+  margin-bottom: 15px;
+}
+
+.cta-description {
+  font-size: 1.2em;
+  line-height: 1.6;
+}
+
+.cta-button {
+  background-color: #f7c300;
+  color: #333;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.cta-button:hover {
+  background-color: #ffbb00;
+}
+
+/* Call-to-Action Section */
+.cta-section {
+  background: linear-gradient(135deg, #0044cc, #007BFF);
+  color: white;
+  text-align: center;
+  padding: 50px 20px;
+  border-radius: 12px;
+  margin: 40px 20px;
+  animation: fadeIn 1.5s ease-in-out;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.cta-title {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #f7f7f7;
+  animation: slideInFromBottom 1.5s ease-out;
+}
+
+.cta-button {
+  background: #f7c300;
+  color: #333;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 8px;
+  font-size: 1.2em;
+  cursor: pointer;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: all 0.3s ease-in-out;
+  animation: scaleIn 1.5s ease-out;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+.cta-button:hover {
+  background: #ffbb00;
+  color: #222;
+  transform: scale(1.1);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInFromBottom {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Mobile Responsiveness */
+@media only screen and (max-width: 768px) {
+  .about-title {
+    font-size: 2em;
+  }
+
+  .about-description {
+    font-size: 1em;
+  }
+
+  .features-title {
+    font-size: 1.5em;
+  }
+
+  .feature-item {
+    font-size: 1em;
+  }
+
+  .images-title {
+    font-size: 1.8em;
+  }
+
+  .image-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+
+  .grid-image {
+    height: 150px;
+  }
+
+  .mission-title {
+    font-size: 1.8em;
+  }
+
+  .statistics-section {
+    padding: 20px;
+  }
+
+  .cta-section {
+    padding: 40px 10px;
+  }
+
+  .cta-title {
+    font-size: 2em;
+  }
+
+  .cta-button {
+    font-size: 1em;
+    padding: 12px 24px;
+  }
+}
+
+/* Mobile Responsiveness (Small screens) */
+@media only screen and (max-width: 480px) {
+  .about-container {
+    margin-top: 500px; /* Adjust this value for smaller screens */
+  }
+
+  .about-title {
+    font-size: 1.8em;
+  }
+
+  .about-description {
+    font-size: 0.9em;
+  }
+
+  .features-title {
+    font-size: 1.4em;
+  }
+
+  .feature-item {
+    font-size: 0.9em;
+  }
+
+  .images-title {
+    font-size: 1.6em;
+  }
+
+  .image-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-image {
+    height: 120px;
+  }
+
+  .mission-title {
+    font-size: 1.6em;
+  }
+
+  .statistics-section {
+    padding: 15px;
+  }
+
+  .cta-section {
+    padding: 30px 10px;
+  }
+
+  .cta-title {
+    font-size: 1.8em;
+  }
+
+  .cta-button {
+    font-size: 0.9em;
+    padding: 10px 20px;
+  }
+}

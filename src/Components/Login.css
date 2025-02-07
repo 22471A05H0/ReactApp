@@ -1,0 +1,122 @@
+/* General Styles for the Login Form */
+
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+  box-shadow: #b0abab;
+}
+
+.login-form {
+  background-color: white;
+  padding: 30px 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.form-title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+label {
+  font-size: 14px;
+  color: #555;
+}
+
+input {
+  width: 100%;
+  padding: 12px 15px; /* Increased padding to avoid touching container */
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  box-sizing: border-box; /* Ensure padding does not affect width */
+  transition: border 0.3s ease;
+}
+
+input:focus {
+  border-color: #6e8efb;
+}
+
+small {
+  color: red;
+  font-size: 12px;
+  position: absolute;
+  bottom: -18px;
+  left: 0;
+}
+
+.error-message {
+  color: red;
+  font-size: 14px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.success-message {
+  color: green;
+  font-size: 14px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.submit-button {
+  width: 100%; /* Button width is equal to input fields */
+  padding: 12px 15px; /* Same padding as input fields */
+  background: linear-gradient(135deg, #6e8efb, #a777e3);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: linear-gradient(135deg, #6e8efb, #a777e3)  0.3s ease;
+}
+
+.submit-button:hover {
+  background: linear-gradient(135deg, #a777e3, #6e8efb);
+}
+
+.error input {
+  border-color: red;
+}
+.register-link {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #555;
+  text-align: center;
+}
+
+.register-text {
+  color: #007bff;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.register-text:hover {
+  color: #0056b3;
+}

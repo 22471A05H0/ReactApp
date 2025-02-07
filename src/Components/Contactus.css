@@ -1,0 +1,138 @@
+/* General Body Styling */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Contact Form Container */
+.contact-container {
+  background-color: white;
+  padding: 30px 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%; /* Adjusted to 100% for better mobile responsiveness */
+  max-width: 400px;
+  text-align: center;
+  margin-top: 80px;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Title Styling */
+.contact-title {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+/* Form Styling */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Creates uniform spacing between inputs */
+}
+
+/* Input Fields and Textarea */
+.form-input,
+.form-textarea {
+  width: 100%; /* Ensure fields are 100% width of their parent container */
+  padding: 12px 15px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box; /* Ensures padding and border are included in the width */
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  border-color: #6e8efb;
+  box-shadow: 0 0 5px rgba(110, 142, 251, 0.5);
+}
+
+/* Textarea Specific Styling */
+.form-textarea {
+  height: 100px;
+  resize: none; /* Prevent resizing */
+}
+
+/* Submit Button */
+.submit-button {
+  padding: 12px 15px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(135deg, #6e8efb, #a777e3);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: linear-gradient(135deg, #6e8efb, #a777e3) 0.3s ease, transform 0.2s ease;
+  width: 100%; /* Ensure the button is the same width as the form fields */
+}
+
+.submit-button:hover {
+  background: linear-gradient(135deg, #a777e3, #6e8efb);
+  transform: scale(1.02);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact-container {
+    padding: 20px 25px;
+    width: 95%; /* Ensures the form is slightly smaller on tablets */
+    max-width: 380px; /* Max width for tablet-sized devices */
+  }
+
+  .form-input,
+  .form-textarea {
+    font-size: 14px;
+    padding: 10px 12px; /* Adjust padding for smaller devices */
+  }
+
+  .submit-button {
+    font-size: 14px;
+    padding: 10px 12px;
+  }
+}
+
+/* Additional Mobile-Specific Responsiveness */
+@media (max-width: 480px) {
+  .contact-container {
+    padding: 15px 20px;
+    width: 100%; /* Ensure it takes the full screen width */
+    max-width: 350px; /* Ensure form doesn't stretch too much */
+  }
+
+  .contact-title {
+    font-size: 20px; /* Slightly smaller font for smaller screens */
+  }
+
+  .form-input,
+  .form-textarea {
+    font-size: 14px;
+    padding: 10px; /* Reduced padding for smaller screens */
+  }
+
+  .submit-button {
+    font-size: 14px;
+    padding: 12px 20px;
+  }
+}
+
+/* Fade-In Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

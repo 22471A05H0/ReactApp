@@ -1,0 +1,115 @@
+/* Container */
+.incident-form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(to bottom right, #007bff, #6a11cb);
+    padding: 20px;
+  }
+  
+  /* Form */
+  .incident-form {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+    animation: fadeIn 0.8s ease-in-out;
+  }
+  
+  /* Title */
+  .form-title {
+    text-align: center;
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+  
+  /* Inputs */
+  label {
+    display: block;
+    margin-bottom: 15px;
+    font-size: 14px;
+    color: #555;
+  }
+  
+  .form-input,
+  .form-select,
+  .form-textarea,
+  .form-file-input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+    transition: all 0.3s ease;
+  }
+  
+  .form-input:focus,
+  .form-select:focus,
+  .form-textarea:focus,
+  .form-file-input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  }
+  
+  /* Textarea */
+  .form-textarea {
+    resize: none;
+    height: 100px;
+    width:auto;
+  }
+  
+  /* Button */
+  .form-submit-button {
+    display: block;
+    width: 100%;
+    padding: 10px 15px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: #007bff 0.3s ease, transform 0.2s ease;
+  }
+  
+  .form-submit-button:hover {
+    background: #0056b3;
+    transform: scale(1.05);
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .incident-form {
+      padding: 15px;
+    }
+  
+    .form-title {
+      font-size: 20px;
+    }
+  
+    .form-submit-button {
+      font-size: 14px;
+    }
+  }
+  
