@@ -2,7 +2,8 @@
 .home-container {
   width: 100vw; /* Full viewport width */
   height: 100vh; /* Full viewport height */
-  background-image: url('C:/React Project/dmsapp/src/Components/disaster_management_system.jpg'); /* Ensure correct path */
+  background-image: url('http://localhost:3000/images/disaster_management_system.jpg');
+ /* Ensure correct path */
   background-size: 100% 100%; /* Ensures full width and height coverage */
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Prevent tiling */
