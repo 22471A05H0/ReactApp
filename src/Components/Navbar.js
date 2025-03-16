@@ -9,6 +9,7 @@ import Login from './Login';
 import Contactus from './Contactus';
 import Admin from './Admin';
 import ParentComponent from "./Parentcomponent";
+import Dashboard from "./Dashboard";
 function AlignmentExample() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -37,7 +38,6 @@ function AlignmentExample() {
               <li><Link to="/About">About</Link></li>
               <li><Link to="/Donate">Donate</Link></li>
               <li><Link to="/Register">Register</Link></li>
-              
               <li><Link to="/Contactus">Contactus</Link></li>
               <li><Link to="/Admin">Admin</Link></li>
             </ul>

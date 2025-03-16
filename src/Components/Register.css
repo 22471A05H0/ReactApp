@@ -46,7 +46,7 @@ label {
 }
 
 input {
-  width: 100%;
+  width: 250%;
   padding: 12px 15px; /* Increased padding to avoid touching container */
   font-size: 16px;
   border: 1px solid #ccc;
